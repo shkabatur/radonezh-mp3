@@ -18,7 +18,7 @@ def fetch_mp3_files(date):
     except Exception as e:
         print(stderr, "Cant create folder with name {} : {}".format(dir_name, str(e)))
         return
-
+    print("Start downloading, date: ", dir_name)
     for i, link in enumerate(links):
         mp3 = req.get(link)
         with open(dir_name + '/' + str(i + 1) + ".mp3", 'wb') as f:
