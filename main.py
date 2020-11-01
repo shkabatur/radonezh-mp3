@@ -28,9 +28,11 @@ def fetch_mp3_files(date):
 
 
 def main():
-    yesterday = datetime.now() - timedelta(1)
-    fetch_mp3_files(yesterday)
 
+    start_date = datetime(2020,1,31)
+    days = 1
+    for delta in range(days):
+        fetch_mp3_files(start_date + timedelta(delta))
 
 if __name__ == "__main__":
     main()
